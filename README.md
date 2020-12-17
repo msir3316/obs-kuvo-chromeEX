@@ -5,8 +5,8 @@ obs-websocketを使って、KUVO経由でrekordboxで流している曲の情報
 <img src="./assets/example.png" width="800px" alt="使用例" />
 
 ## 動作確認済み
-Mac OS X Catalina　(Windowsは未確認)
-OBS Studio (Mac版) 26.0.2
+- Mac OS X Catalina　(Windowsは未確認)
+- OBS Studio (Mac版) 26.0.2
 
 # 目次
 1. [OBSの準備](#obs_setting)
