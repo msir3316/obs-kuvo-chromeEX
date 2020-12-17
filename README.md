@@ -19,6 +19,7 @@ obs-websocketを使って、KUVO経由でrekordboxで流している曲の情報
 # OBSの準備
 1. OBSに [obs-websocket](https://github.com/Palakis/obs-websocket/) をインストール
 1. OBS起動
+1. OBSメニューから「ツール -> Websocket Server Settings」でパスワード等を設定
 1. 「title」「artist」のテキストソースを作る
     1. 「title」「artist」はそれぞれ曲名とアーティスト名の表示欄になる
 1. 「title」「artist」に「scroll」という名前でスクロールのフィルターを作る
