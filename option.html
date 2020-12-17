@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <p>
+    接続用の設定
+    <ul>
+    接続先：
+    <li><input id="address" type="text">
+    <br>
+
+    パスワード：
+    <li><input id="password" type="password">
+    </ul>
+    </p>
+    
+    <p>
+    文字スクロールについての設定
+    <ul>
+    <li>何文字以上でスクロールさせるか（全角換算）
+        <ul>
+            <li>タイトル<input id="titleLimitLength" type="number">
+            <li>アーティスト<input id="artistLimitLength" type="number">
+        </ul>
+    <li>スクロールの幅（サイズ調整により変動、各自調整）
+        <ul>
+            <li>タイトル<input id="titleWidth" type="number">
+            <li>アーティスト<input id="artistWidth" type="number">
+        </ul>
+    <li>スクロール速度（お好みで）<input id="scrollSpeed" type="number">
+    </ul>
+    
+    </p>
+
+    <p>
+    <button id="save">保存</button>
+    </p>
+        
+    <div id="status"></div>
+    <script src="option.js"></script>
+  </body>
+</html>

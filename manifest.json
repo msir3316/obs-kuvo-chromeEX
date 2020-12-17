@@ -1,0 +1,21 @@
+{
+    "name": "OBS-KUVO-ChromeEX",
+    "version": "1.0",
+    "description": "OBSと接続し、KUVOのデータを送るChrome拡張",
+    "permissions": ["tabs","activeTab","declarativeContent", "storage"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "page_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "32": "icon/icon_32.png"
+      }
+    },
+   "icons": {
+      "48": "icon/icon_48.png"
+    },
+    "options_page":"option.html",
+    "manifest_version": 2
+}
