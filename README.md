@@ -38,6 +38,7 @@ Mac OS X Catalina　(Windowsは未確認)
 1. そのページで拡張のポップアップを開く。目印はこのアイコン<img src="./icon/icon_32.png" width=16px alt="アイコン" />
 1. 「更新する」ボタンを押す
 1. OBSの「title」「artist」の内容が変わる
+1. 次に曲を流すたびに、ページをリロードすると良いでしょう
 
 <a id="contact"></a>
 # 連絡先
