@@ -10,6 +10,8 @@ function save_options(){
     
     let scrollSpeed = document.getElementById("scrollSpeed").value;
     
+    let autoReflect = document.getElementById("autoReflect").checked;
+    
     chrome.storage.local.set({
         address: address,
         password: password,
@@ -17,7 +19,8 @@ function save_options(){
         artistLimitLength: artistLimitLength,
         titleWidth: titleWidth,
         artistWidth: artistWidth,
-        scrollSpeed: scrollSpeed
+        scrollSpeed: scrollSpeed,
+        autoReflect: autoReflect
     }, function(){
         var status = document.getElementById('status');
             status.textContent = "Options saved.";
@@ -36,7 +39,8 @@ function set_options(){
     artistLimitLength: 40,
     titleWidth: 1980,
     artistWidth: 1980,
-    scrollSpeed: 25.0
+    scrollSpeed: 25.0,
+    autoReflect: false
     }, function(items){
         //値が保存されていたら
         document.getElementById("address").value = items.address;
@@ -46,6 +50,7 @@ function set_options(){
         document.getElementById("titleWidth").value = items.titleWidth;
         document.getElementById("artistWidth").value = items.artistWidth;
         document.getElementById("scrollSpeed").value = items.scrollSpeed;
+        document.getElementById("autoReflect").checked = items.autoReflect;
     })
 };
 

@@ -1,6 +1,6 @@
 {
     "name": "OBS-KUVO-ChromeEX",
-    "version": "1.0",
+    "version": "1.1",
     "description": "OBSと接続し、KUVOのデータを送るChrome拡張",
     "permissions": ["tabs","activeTab","declarativeContent", "storage"],
     "background": {
@@ -16,6 +16,12 @@
    "icons": {
       "48": "icon/icon_48.png"
     },
+   "content_scripts": [
+     {
+       "matches": ["https://kuvo.com/playlist/*"],
+       "js": ["obs-websocket.js","core.js", "content.js"]
+     }
+   ],
     "options_page":"option.html",
     "manifest_version": 2
 }
