@@ -11,6 +11,7 @@ function save_options(){
     let scrollSpeed = document.getElementById("scrollSpeed").value;
     
     let autoReflect = document.getElementById("autoReflect").checked;
+    let observePage = document.getElementById("observePage").checked;
     
     chrome.storage.local.set({
         address: address,
@@ -20,7 +21,8 @@ function save_options(){
         titleWidth: titleWidth,
         artistWidth: artistWidth,
         scrollSpeed: scrollSpeed,
-        autoReflect: autoReflect
+        autoReflect: autoReflect,
+        observePage: observePage
     }, function(){
         var status = document.getElementById('status');
             status.textContent = "Options saved.";
@@ -34,13 +36,14 @@ function set_options(){
     //default value
     chrome.storage.local.get({
     address: "localhost:4444",
-    password: "hogehoge",
+    password: "",
     titleLimitLength: 40,
     artistLimitLength: 40,
     titleWidth: 1980,
     artistWidth: 1980,
     scrollSpeed: 25.0,
-    autoReflect: false
+    autoReflect: false,
+    observePage: false
     }, function(items){
         //値が保存されていたら
         document.getElementById("address").value = items.address;
@@ -51,6 +54,7 @@ function set_options(){
         document.getElementById("artistWidth").value = items.artistWidth;
         document.getElementById("scrollSpeed").value = items.scrollSpeed;
         document.getElementById("autoReflect").checked = items.autoReflect;
+        document.getElementById("observePage").checked = items.observePage;
     })
 };
 
