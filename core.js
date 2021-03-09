@@ -55,7 +55,7 @@ function getLengthForZenkaku(str){
 function getMusicInfo(){
     //メッセージのやりとりがわからなかったので代わりにかなりごり押しな実装
     let query = 'let row = document.querySelector(".row.on");'+
-                'if(!row) row = document.querySelector(".row.off");'+
+                'if(!row){ rowoff = document.querySelectorAll(".row.off");row = rowoff.item(rowoff.length-1);}'+
                 'let t = row.querySelector(".title").innerText;'+
                 'let a = row.querySelector(".artist").innerText;'+
                 '({title: t, artist: a})';

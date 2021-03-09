@@ -24,7 +24,9 @@ function observeMutation(){
 
 function getMusicInfoDirectly(){
     let row = document.querySelector(".row.on");
-    if(!row) row = document.querySelector(".row.off");
+    if(!row){ rowoff = document.querySelectorAll(".row.off");
+        row = rowoff.item(rowoff.length-1);
+    }
     if(!row){
         alert("Not Found");
         return;
