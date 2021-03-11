@@ -12,7 +12,7 @@ obs-websocketを使って、KUVO経由でrekordboxで流している曲の情報
 1. [OBSの準備](#obs_setting)
 1. [本体の準備](#setting)
 1. [使い方](#how2use)
-1. [その他](#others)
+1. [オプション解説](#options)
 1. [確認済み不具合](#problems)
 1. [連絡先](#contact)
 1. [姉妹作](#sister_works)
@@ -44,7 +44,7 @@ obs-websocketを使って、KUVO経由でrekordboxで流している曲の情報
 1. OBSの「title」「artist」の内容が変わる
 1. 次に曲を流すたびに、ページをリロードすると良いでしょう
 
-<a id="others"></a>
+<a id="options"></a>
 # オプション解説
 - 何文字以上でスクロールさせるか（全角換算）
     - 設定した数値以上の文字数の場合、後述のスクロールフィルタがONになります。
