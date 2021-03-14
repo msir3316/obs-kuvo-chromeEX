@@ -127,11 +127,21 @@ function setMusicInfo(musicInfo){
                   obs.send("SetTextFreetype2Properties",{"source":"title","text":musicInfo["title"]});
                   obs.send("SetTextFreetype2Properties",{"source":"artist","text":musicInfo["artist"]});
               }
-              obs.disconnect();
           })
-            .catch(err => { // Promise convention dicates you have a catch on every chain.
-                alert("OBSとの接続に失敗しました");
+        .catch(err => { // Promise convention dicates you have a catch on every chain.
+            alert("OBSとの接続に失敗しました");
             console.log(err);
+        })
+//        .then(() =>{
+//            obs.sendCallback("GetSceneItemProperties", {"item":"title"}, (err, data) => {
+//                console.log("Using callbacks:", err, data);
+//                if(!err){
+//                    console.log(data["width"]);
+//                }
+//            });
+//        })
+        .then(() =>{
+            obs.disconnect();
         });
     });
 };
