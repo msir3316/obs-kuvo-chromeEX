@@ -116,17 +116,12 @@ function setMusicInfo(musicInfo){
                   obs.send("SetSourceFilterSettings", {"sourceName":"artist", "filterName": "scroll", "filterSettings": notScrollArtist});
               }
               
+              //OSの種類に関わらず両方実行する
+              obs.send("SetTextGDIPlusProperties",{"source":"title","text":musicInfo["title"]});
+              obs.send("SetTextGDIPlusProperties",{"source":"artist","text":musicInfo["artist"]});
               
-              //OSを判断して対応するメッセージを送る
-              let os = isWindowsOrMac();
-              if(os == "win"){
-                  obs.send("SetTextGDIPlusProperties",{"source":"title","text":musicInfo["title"]});
-                  obs.send("SetTextGDIPlusProperties",{"source":"artist","text":musicInfo["artist"]});
-              }
-              if(os == "mac"){
-                  obs.send("SetTextFreetype2Properties",{"source":"title","text":musicInfo["title"]});
-                  obs.send("SetTextFreetype2Properties",{"source":"artist","text":musicInfo["artist"]});
-              }
+              obs.send("SetTextFreetype2Properties",{"source":"title","text":musicInfo["title"]});
+              obs.send("SetTextFreetype2Properties",{"source":"artist","text":musicInfo["artist"]});
           })
         .catch(err => { // Promise convention dicates you have a catch on every chain.
             alert("OBSとの接続に失敗しました");
