@@ -2,10 +2,6 @@ function save_options(){
     let address = document.getElementById("address").value;
     let password = document.getElementById("password").value;
     
-    let os = document.getElementById("server");
-    let radioNodeList = os.os;
-    let a = radioNodeList.value;
-    
     let titleLimitLength = document.getElementById("titleLimitLength").value;
     let artistLimitLength = document.getElementById("artistLimitLength").value;
     
