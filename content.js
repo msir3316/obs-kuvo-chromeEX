@@ -37,10 +37,13 @@ function getMusicInfoDirectly(){
     setMusicInfo({title: t, artist: a});
 };
 
-window.addEventListener("load", autoSet);
-
-chrome.storage.local.get(["observePage"],function(items){
-    if(items.observePage){
-        observeMutation();
-    }
+window.addEventListener("load", function(){
+    autoSet();
+    chrome.storage.local.get(["observePage"],function(items){
+        if(items.observePage){
+            observeMutation();
+        }
+    });
 });
+
+
