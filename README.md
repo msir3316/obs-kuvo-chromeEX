@@ -2,6 +2,8 @@
 
 obs-websocketを使って、KUVO経由でrekordboxで流している曲の情報を表示するやつをChrome拡張用に作りました
 
+こちらは簡易版 https://github.com/msir3316/obs-kuvo-chromeEX-Lite
+
 <img src="./assets/example.png" width="800px" alt="使用例" />
 
 ## 動作確認済み
